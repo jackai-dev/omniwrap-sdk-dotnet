@@ -1,0 +1,12 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/dotnet-package/v2.json",
+  "archive_type": "nupkg",
+  "assembly_name": "OmniWrapSdk",
+  "assembly_version": "1.0.0.0",
+  "package_id": "OmniWrapSdk",
+  "public_client_type": "OmniWrap.Sdk.ApiClient",
+  "root_namespace": "OmniWrap.Sdk",
+  "source_version": "1.0.0",
+  "target_framework": "net8.0",
+  "version": "1.0.0"
+}

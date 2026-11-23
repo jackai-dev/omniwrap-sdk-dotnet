@@ -1,0 +1,132 @@
+{
+  "contract_fingerprint": "2289bcb0d661bdea6dd47c7967f37aace7d3a152e18e7d2f64c08514fb73e795",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "OmniWrapSdk 1.0.0",
+        "ecosystem": "NuGet",
+        "entry": "OmniWrap.Sdk.ApiClient",
+        "import": "using OmniWrap.Sdk;"
+      },
+      "operations": {
+        "cancelPreview": {
+          "member": "Previews.CancelAsync",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/cancel",
+          "resource": "Previews",
+          "signature": "public Task<CancellationReceipt> CancelAsync(\nstring projectId,\nstring previewId,\nstring ifMatch,\nstring idempotencyKey,\nstring xCSRFToken,\nCancelRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "createConfigurationRevision": {
+          "member": "Configurations.CreateRevisionAsync",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/configuration-revisions",
+          "resource": "Configurations",
+          "signature": "public Task<ConfigurationRevision> CreateRevisionAsync(\nstring projectId,\nstring ifMatch,\nstring idempotencyKey,\nstring xCSRFToken,\nConfigurationRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "createPreview": {
+          "member": "Previews.CreateAsync",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/previews",
+          "resource": "Previews",
+          "signature": "public Task<Preview> CreateAsync(\nstring projectId,\nstring ifMatch,\nstring idempotencyKey,\nstring xCSRFToken,\nPreviewRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "createSourceRevision": {
+          "member": "Sources.CreateRevisionAsync",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/source-revisions",
+          "resource": "Sources",
+          "signature": "public Task<SourceRevision> CreateRevisionAsync(\nstring projectId,\nstring idempotencyKey,\nstring xCSRFToken,\nstring displayName,\nJsonElement body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getArtifact": {
+          "member": "Artifacts.GetAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/artifacts/{artifactId}",
+          "resource": "Artifacts",
+          "signature": "public Task<Artifact> GetAsync(\nstring projectId,\nstring artifactId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getConfigurationRevision": {
+          "member": "Configurations.GetRevisionAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/configuration-revisions/{revisionId}",
+          "resource": "Configurations",
+          "signature": "public Task<ConfigurationRevision> GetRevisionAsync(\nstring projectId,\nstring revisionId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getEvidence": {
+          "member": "Evidence.GetAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/evidence/{evidenceId}",
+          "resource": "Evidence",
+          "signature": "public Task<Evidence> GetAsync(\nstring projectId,\nstring evidenceId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getPreview": {
+          "member": "Previews.GetAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}",
+          "resource": "Previews",
+          "signature": "public Task<Preview> GetAsync(\nstring projectId,\nstring previewId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getPreviewEvents": {
+          "member": "Previews.GetEventsAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/events",
+          "resource": "Previews",
+          "signature": "public Task<EventPage> GetEventsAsync(\nstring projectId,\nstring previewId,\nstring? cursor = null,\nlong? limit = null,\nstring? lastEventID = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getPreviewLogs": {
+          "member": "Previews.GetLogsAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/logs",
+          "resource": "Previews",
+          "signature": "public Task<LogPage> GetLogsAsync(\nstring projectId,\nstring previewId,\nstring? cursor = null,\nlong? limit = null,\nGetPreviewLogsLevel? level = null,\nstring? phaseId = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getProject": {
+          "member": "Projects.GetAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}",
+          "resource": "Projects",
+          "signature": "public Task<Project> GetAsync(\nstring projectId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getSourceRevision": {
+          "member": "Sources.GetRevisionAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/source-revisions/{revisionId}",
+          "resource": "Sources",
+          "signature": "public Task<SourceRevision> GetRevisionAsync(\nstring projectId,\nstring revisionId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "getUserContext": {
+          "member": "Context.GetUserAsync",
+          "method": "GET",
+          "path": "/v1/me/context",
+          "resource": "Context",
+          "signature": "public Task<UserContext> GetUserAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listPreviewEvidence": {
+          "member": "Evidence.ListPreviewAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/evidence",
+          "resource": "Evidence",
+          "signature": "public Task<EvidencePage> ListPreviewAsync(\nstring projectId,\nstring previewId,\nstring? cursor = null,\nlong? limit = null,\nstring? gateId = null,\nListPreviewEvidenceAvailability? availability = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listPreviews": {
+          "member": "Previews.ListAsync",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews",
+          "resource": "Previews",
+          "signature": "public Task<PreviewPage> ListAsync(\nstring projectId,\nstring? cursor = null,\nlong? limit = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        },
+        "listProjects": {
+          "member": "Projects.ListAsync",
+          "method": "GET",
+          "path": "/v1/projects",
+          "resource": "Projects",
+          "signature": "public Task<ProjectPage> ListAsync(\nstring? cursor = null,\nlong? limit = null,\nstring? queryX738b12b7b458 = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+        }
+      },
+      "package_directory": "../OmniWrapSdk",
+      "package_manifest": "OmniWrapSdk.csproj",
+      "reference": "api.md",
+      "renderer": "dotnet"
+    }
+  ]
+}
